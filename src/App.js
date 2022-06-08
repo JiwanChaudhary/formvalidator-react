@@ -1,6 +1,12 @@
+import Form from "./form/Form";
+import "./GlobalStyle.css";
 
 function App() {
-  return <div>Form Validator</div>;
+  return (
+    <>
+      <Form />
+    </>
+  )
 }
 
 export default App;
