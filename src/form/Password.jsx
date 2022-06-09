@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { FormContainer, Label, Input } from "./Form.styled";
 
 const Password = () => {
+  const [inputPassword, setInputPassword] = useState({
+    password: "",
+    confirmPassword: "",
+  });
+
+  function handleInputText(e) {
+    const { name, value } = e.target;
+    console.log(value);
+    console.log(name);
+
+    setInputPassword((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  }
+
   return (
     <>
       <FormContainer>
@@ -13,6 +29,8 @@ const Password = () => {
           required
           pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
           title="Please include 1 uppercase, 1 lower case and 1 number."
+          value={inputPassword.password}
+          onChange={handleInputText}
         />
       </FormContainer>
       <FormContainer>
@@ -24,6 +42,8 @@ const Password = () => {
           placeholder="Confirm Password"
           required
           pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+          value={inputPassword.password}
+          onChange={handleInputText}
         />
       </FormContainer>
     </>
