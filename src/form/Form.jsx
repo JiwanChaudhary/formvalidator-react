@@ -3,20 +3,20 @@ import {
   Container,
   Heading,
   MainForm,
-  Button,
   MessageContainer,
   Message,
 } from "./Form.styled";
 import ContainerForm from "./ContainerForm";
+import FormButton from "./Button";
 
 const Form = () => {
-  const [message, setMeaasge] = useState(`Don't Hesitate`);
+  const [message, setMessage] = useState(`Don't Hesitate`);
   return (
     <Container>
       <Heading>Sign Up!</Heading>
       <MainForm>
         <ContainerForm />
-        <Button>Register</Button>
+        <FormButton />
       </MainForm>
 
       <MessageContainer>

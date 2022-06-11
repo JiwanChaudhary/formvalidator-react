@@ -59,12 +59,19 @@ export const Button = styled.button`
   margin-top: 5px;
 
   &:hover {
-    filter: brightness(200%);
-    background: rgb(20, 20, 20);
+    /* filter: brightness(200%);
+    background: rgb(20, 20, 20); */
+    cursor: auto;
   }
 
   &:focus {
     outline: none;
+  }
+
+  &:disabled {
+    background-color: #cccccc;
+    color: #fff;
+    cursor: auto;
   }
 `;
 
