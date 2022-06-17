@@ -1,8 +1,16 @@
-import React from "react";
-import { FormContainer, Label, Input } from "./Form.styled";
+import React,{useState} from "react";
+import { FormContainer, Label, Input, Button, Message, MessageContainer } from "./Form.styled";
 import Password from "./Password";
 
-const ContainerForm = () => {
+const ContainerForm = ({form}) => {
+  const [state,setState] = useState(form);
+  const [message, setMessage] = useState(`Don't hesitate`);
+
+  function handleClick() {
+    setState('Oops!')
+    setMessage('Complete the form');
+  }
+ 
   return (
     <>
       <FormContainer>
@@ -49,7 +57,11 @@ const ContainerForm = () => {
           required
         />
       </FormContainer>
-      <Password />
+      <Password form={'Register'}/>
+      <Button onClick={handleClick}>{state}</Button>
+      <MessageContainer >
+      <Message>{message}</Message>
+      </MessageContainer>
     </>
   );
 };

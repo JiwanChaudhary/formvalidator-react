@@ -13,10 +13,6 @@ const Password = () => {
     let data = [...inputPassword];
     data[index][event.target.name] = event.target.value;
     setInputPassword(data);
-    const { password, confirmPassword } = inputPassword;
-    if (password !== confirmPassword) {
-      alert("Password do not match");
-    } else return;
   }
 
   return (
