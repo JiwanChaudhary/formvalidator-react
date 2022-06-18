@@ -77,7 +77,7 @@ export const Button = styled.button`
 
 export const MessageContainer = styled.div`
   border: 1px solid #000;
-  width: 90%;
+  width: 100%;
   margin-top: 10px;
   border-radius: 5px;
   padding: 5px;
@@ -85,4 +85,5 @@ export const MessageContainer = styled.div`
   justify-content: center;
   color: #000;
 `;
-export const Message = styled.h3``;
+export const Message = styled.h3`
+`;

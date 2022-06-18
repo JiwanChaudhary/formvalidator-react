@@ -57,7 +57,7 @@ const ContainerForm = ({form}) => {
           required
         />
       </FormContainer>
-      <Password form={'Register'}/>
+      <Password/>
       <Button onClick={handleClick}>{state}</Button>
       <MessageContainer >
       <Message>{message}</Message>
